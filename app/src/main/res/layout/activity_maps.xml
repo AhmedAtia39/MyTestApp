@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:fitsSystemWindows="true"
+        tools:openDrawer="end">
+
+        <carbon.widget.ConstraintLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <fragment
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".activity.MapsActivity" />
+
+            <carbon.widget.ConstraintLayout
+                android:id="@+id/topView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:background="@color/bg_box"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_12sdp"
+                app:carbon_cornerRadius="@dimen/_8sdp"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <carbon.widget.LinearLayout
+                    android:id="@+id/img"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:background="@color/white"
+                    app:carbon_cornerRadius="@dimen/_50sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:gravity="center"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/imgMenu"
+                        android:layout_width="@dimen/_16sdp"
+                        android:layout_height="@dimen/_16sdp"
+                        android:src="@drawable/navigation_home"
+                         />
+
+                </carbon.widget.LinearLayout>
+
+                <carbon.widget.EditText
+                    android:id="@+id/edt_source"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:background="@color/white"
+                    android:hint="@string/yourLocation"
+                    android:maxLines="1"
+                    android:textColor="@color/black"
+                    android:paddingHorizontal="@dimen/_6sdp"
+                    android:paddingVertical="@dimen/_8sdp"
+                    app:carbon_cornerRadius="@dimen/_6sdp"
+                    app:layout_constraintTop_toBottomOf="@+id/img" />
+
+                <carbon.widget.EditText
+                    android:id="@+id/edt_destination"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:background="@color/white"
+                    android:hint="@string/destination"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:paddingHorizontal="@dimen/_6sdp"
+                    android:paddingVertical="@dimen/_8sdp"
+                    app:carbon_cornerRadius="@dimen/_6sdp"
+                    app:layout_constraintTop_toBottomOf="@+id/edt_source" />
+
+            </carbon.widget.ConstraintLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSource"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_box"
+                app:layout_constraintTop_toBottomOf="@+id/topView"
+                tools:listitem="@layout/item_txt" />
+
+            <carbon.widget.Button
+                android:id="@+id/btnRequested"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_40sdp"
+                android:background="@color/bg_requestBtn"
+                android:paddingVertical="@dimen/_10sdp"
+                android:text="@string/request"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:carbon_cornerRadius="@dimen/_5sdp"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </carbon.widget.ConstraintLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:itemTextColor="@color/nav_color_select"
+            android:fitsSystemWindows="true"
+            app:menu="@menu/menu_main_drawer" />
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</layout>
+
+

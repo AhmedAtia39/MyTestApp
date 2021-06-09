@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="alert">Alert !</string>
+    <string name="enable">Enable</string>
+    <string name="allow_location">Location service is disabled, please enable it</string>
+    <string name="go">Go to setting</string>
+    <string name="enableLocationSetting">You should go to app setting to allow app to access this device\'s location</string>
+    <string name="errorNetworkConnection">Please connect to network</string>
+    <string name="request">REQUESTED RD</string>
+    <string name="yourLocation">Your location</string>
+    <string name="destination">Destination</string>
+    <string name="driver">" Driver: "</string>
+    <string name="select_source_first">Select the source location first</string>
+    <string name="The_closest_driver_is"> The closest driver is </string>
+    <string name="with_distance"> with distance : </string>
+    <string name="km"> KM  </string>
+</resources>

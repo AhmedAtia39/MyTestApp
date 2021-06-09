@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="alert">تنبيه !</string>
+    <string name="enable">تفعيل</string>
+    <string name="allow_location">تحديد الموقع الحالي غير مفعل, يرجى تفعيل تحديد الموقع</string>
+    <string name="go">الذهاب للإعدادات</string>
+    <string name="enableLocationSetting">يجب عليك التوجه لإعدادات التطبيق للسماح بمعرفة موقعك</string>
+    <string name="errorNetworkConnection">رجاء الإتصال بالنت</string>
+    <string name="request">طلب</string>
+    <string name="yourLocation">موقعك</string>
+    <string name="destination">موقع الوصول</string>
+    <string name="driver"> السائق: </string>
+    <string name="select_source_first">حدد موقعك اولاً</string>
+    <string name="The_closest_driver_is"> أقرب سائق هو </string>
+    <string name="with_distance"> بمسافة: </string>
+    <string name="km"> كم </string>
+</resources>

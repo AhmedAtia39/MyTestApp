@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#88000000"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200sdp"
+        android:background="@drawable/common_layout_rounded_bg"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/_30sdp"
+        android:clipChildren="true"
+        android:weightSum="4">
+
+        <TextView
+            android:id="@+id/tv_common_popup_header"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/top_rounded_bg"
+            android:gravity="center"
+            android:text="@string/alert"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+
+
+        <TextView
+            android:id="@+id/tv_common_popup_info"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:background="@color/white"
+            android:lineSpacingExtra="@dimen/_4sdp"
+            android:text="@string/allow_location"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13sdp"
+            />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f0f0f0" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_margin="@dimen/_4sdp"
+            android:background="@color/white"
+            android:weightSum="1">
+
+            <carbon.widget.TextView
+                style="?android:attr/borderlessButtonStyle"
+                android:id="@+id/enable_gps"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:text="@string/enable"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/_12sdp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+
+
+
